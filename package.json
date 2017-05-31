@@ -2,6 +2,9 @@
  "name": "angular-redux-api",
   "version": "0.0.0",
   "license": "MIT",
+  "engines": {
+    "node": "6.10.2"
+  },
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
@@ -49,5 +52,6 @@
     "tslint": "~4.5.0",
     "typescript": "~2.2.0"
   }
+ 
 }
 
