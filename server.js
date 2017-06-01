@@ -8,17 +8,7 @@ app.use(express.static(__dirname + '/dist'));
 // Heroku port
 app.listen(process.env.PORT || 8080);
 
-// Trying to add json Server
-var jsonServer = require('json-server');
-var server = jsonServer.create();
-var router = jsonServer.router(__dirname + 'db.json');
-var middlewares = jsonServer.defaults();
-var port = 3000;
-server.use(middlewares);
-server.use(router);
-server.listen(port, function () {
-  console.log('JSON Server is running')
-});
+
 
 
 
