@@ -5,13 +5,14 @@ import {Http, Headers, Response} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import {Observable} from 'rxjs/Observable';
 import {User} from '../models';
+
 const BASE_URL2 = 'http://localhost:3000/db';
 const BASE_URL = 'http://localhost:3000/users';
 const HEADER = { headers: new Headers({ 'Content-Type': 'application/json' }) };
 
-// Trying to add json Server
-var jsonServer = require('json-server');
-var server = jsonServer.create();
+// Trying to add json Server for REST API
+const jsonServer = require('json-server');
+const server = jsonServer.create();
 const path = require('path');
 const router = jsonServer.router(path.join(__dirname + 'db.json'));
 var middlewares = jsonServer.defaults();
